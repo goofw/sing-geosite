@@ -51,3 +51,9 @@ jobs:
             geosite.db.sha256sum
             geosite-cn.db
             geosite-cn.db.sha256sum
+      
+      - uses: dev-drprasad/delete-older-releases@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          keep_latest: 5
